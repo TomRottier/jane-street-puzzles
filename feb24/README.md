@@ -107,3 +107,14 @@ $$
     - Separate the support by the lines $x_2 = Y/x_1$ and $x_2 = 1 + Y/(x_1-1)$. The area below the first line and above the second give the conditions for when the two cases are both true
 - Each condition defines a 3D volume in 4D space, the intersection of the four volumes gives the values of the variables for which all conditions are true. The probability of all four conditions being true is the integral of the joint pdf over this volume.
 
+
+## Post answer solution
+- Key seemed to be breaking the square up into octants and the line $y=x$ separating each octant defined space where circle could be entirely within square for that octant.
+- Changing coordinates to represent the midpoint and polar coordinates for the radius, the probability the circle is inside the square for an octant is given by:
+$$
+\begin{equation*}
+    \int_0^{0.5} \int_0^x \int_0^y \int_0^{2\pi} 4r \,d\theta\,dr\,dy\,dx = \frac{\pi}{48}
+\end{equation*}
+$$
+- Then need to multiply by $8$ to add up probability for each octant
+- The complement of this event is thus the probability that some part of the circle will be outside the square and is given by: $1 - \frac{\pi}{6} \approx 0.486$.
